@@ -1,0 +1,59 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class solution{
+    public:
+    vector<pair<string, pair<int, double>>> orders;
+    
+    void addOrder(string itemName, int quantity, double price) {
+        
+        orders.push_back({itemName,{quantity,price}});
+    }
+    
+    void updateOrder(string itemName, int newQuantity, double newPrice) {
+        //Write your code here...
+        for(auto &i:orders){
+            if(i.first==itemName){
+                i.second.first=newQuantity;
+                i.second.second=newPrice;
+            }
+            }
+        
+        
+    
+    
+    double calculateTotalRevenue() {
+        
+        double rev=0;
+        for(auto i:orders){
+            rev+=((i.second.first)*(i.second.second));
+        }
+    return rev;
+    }
+};
+
+
+
+
+
+
+Input:               
+3
+A Laptop 1 1000.00
+A Mouse 2 25.00
+C
+
+
+output
+1050.00
+
+
+Input:
+4
+A Keyboard 3 30.00
+A Monitor 1 200.00
+U Keyboard 4 40.00->quantity and price are updated
+C
+output:
+360.00
+
