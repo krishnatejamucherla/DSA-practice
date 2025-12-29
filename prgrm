@@ -1,0 +1,14 @@
+//Divide a large number and print with set precision
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write Your Code here...
+    long long num;
+    int divisor;
+    cin >> num >> divisor;
+    cout <<fixed<<setprecision(2)<<(double)num/divisor<<endl;
+
+    return 0;
+}
