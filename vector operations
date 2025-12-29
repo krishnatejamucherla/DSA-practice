@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution {
+public:
+    void insertElement(vector<int> &arr, int x) {
+        // Write your code here...
+        arr.push_back(x);
+    }
+    
+    void deleteElement(vector<int> &arr, int x) {
+        // Write your code here...
+        for(auto i=arr.begin();i!=arr.end();i++){
+            if(*i==x){
+                arr.erase(i);
+                return;
+            }
+        }
+        
+    }
+    
+    void reverseArray(vector<int> &arr) {
+        // Write your code here...
+        reverse(arr.begin(),arr.end());
+        
+    }
+    
+    void sizeOfArray(vector<int> &arr) {
+        // Write your code here...
+        cout<<arr.size();
+        
+    }
+    
+    void displayArray(vector<int> &arr) {
+        // Write your code here...
+        for(int k:arr){
+            cout<<k<<" ";
+        }
+        cout<<endl;
+        
+    }
+};
