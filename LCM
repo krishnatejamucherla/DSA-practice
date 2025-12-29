@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class solution {
+public:
+//LCM=(A*B)/gcd(A,B)
+    int lcm(int A, int B) {
+        int k=A*B,lcm=1;;
+        while(A!=0 && B!=0){
+        if(A>=B)
+        A=A%B;
+        else
+        B=B%A;
+        }
+        if(A==0)
+        lcm=(k/B);
+        else
+        lcm=(k/A);
+        return lcm;
+    }
+
+};
