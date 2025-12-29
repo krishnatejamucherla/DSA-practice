@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class solution{
+    public:
+    void operate( vector<pair<int, string>> &pairs) {
+        //Write your code here...
+        int sum=0;
+        string s="";
+            for(auto i:orders){
+            sum+=i->first;
+            s+=i->second;
+        }
+        cout<<sum<<endl<<s<<endl<<s.size()<<endl;
+    }
+};
+
+INPUT:
+3->no of operations(3 are inputs)
+10 hello
+20 world
+30 welcome
+
+output:
+60
+helloworldwelcome
+17
