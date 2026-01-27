@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+ bool isSorted(int arr[],int n){
+        bool b=false;
+        for(auto i=1;i<n;i++){
+            if(arr[i]>=arr[i-1])
+            b=true;
+            else
+            {
+            b=false;
+            break;
+            }
+        }
+        return b;
+ }    
+        
+int main() {
+ int a[5]={11,11,22,33,44};
+ cout<<isSorted(a,5);
+  return 0;
+}
