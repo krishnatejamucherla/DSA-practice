@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+ //shift duplicates to end and print the unique elements
+ void dup(int a[],int n){
+     int i=0;
+     for(auto j=1;j<n;j++){
+         if(a[i]!=a[j]){
+             a[i+1]=a[j];
+             i++;
+         }
+     } 
+//unique elements are upto (i+1) length and no of unique elements are (i+1)
+         for(int k=0;k<i+1;k++){
+             cout<<a[k];
+         }
+ }
+int main() {
+ int a[5]={11,11,22,33,44};
+ dup(a,5);
+  return 0;
+}
